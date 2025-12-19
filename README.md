@@ -120,7 +120,7 @@ All of these services are started but stops once the machine is cut off and need
     
 - Enter a drive and enter the name of the server and the folder for the share and click finish
 
-![image.png](image%201.png)
+![images/image 1.png](image%201.png)
 
 - Now we have access to the JAWUNSERVER hackme share
 
