@@ -71,7 +71,7 @@ All of these services are started but stops once the machine is cut off and need
 # LLMNR/NBT-NS Poisining Project
 - Start off on Windows Server 2022 to File and Storage Services, then click shares
 
-![images/image_1.png](Screenshot_2025-12-16_102059.png)
+![images/image 1.png](Screenshot_2025-12-16_102059.png)
 
 - Open your files and go to the local C: drive on your computer and create a folder called hackme
 
