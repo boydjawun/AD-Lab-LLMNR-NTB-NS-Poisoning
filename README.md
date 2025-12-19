@@ -70,7 +70,7 @@ All of these services are started but stops once the machine is cut off and need
 - If the resource requires Authentication(common for file shares via SMB) The victim automatically sends NTLM creds(username + hashed password, often NTLMv2)
 
 # LLMNR/NBT-NS Poisining Project
-- Start off on Windows Server 2022 to File and Storage Services, then click shares (the picture below shows a share I've already created
+- Start off on Windows Server 2022 to File and Storage Services, then click shares (the picture below shows a share I've already created)
 
 <img width="965" height="373" alt="image" src="https://github.com/user-attachments/assets/459270bd-7af2-473e-b5a7-0400333a4329" />
 
