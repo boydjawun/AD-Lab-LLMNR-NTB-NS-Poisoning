@@ -1,5 +1,8 @@
 # Building AD Lab, LLMNR/NBT-NS Poisioning, and NTLMv2 Cracking w / Hashcat + JohnTheRipper
-I am performing LLMNR/NBT-NS Poisioning on a Vulnerable Active Directory server on VMWare. In this project I set up and configured the Kali Linux, Windows 11 iso, and Windows 2022 Server iso. First I will briefly go over the steps I used to set up the AD DS. Once I recieved the NTLMv2 hash I was unable to crack it due to a slew of possibilites, but the main goal for this project was achieved because I successfully captured the hash for the User I created while setting in the AD DS.
+I am conducting a demonstration of LLMNR/NBT-NS poisoning against a vulnerable Active Directory environment in a virtualized setting using VMware. For this project, I provisioned and configured virtual machines running Kali Linux, Windows 11, and Windows Server 2022.
+The setup process began with the installation and configuration of Active Directory Domain Services (AD DS) on the Windows Server 2022 instance. This included promoting the server to a domain controller and creating a test user account.
+Following the successful configuration of the AD environment, I executed the LLMNR/NBT-NS poisoning attack from the Kali Linux system. The attack successfully induced the target Windows 11 client to authenticate using NTLMv2, allowing me to capture the corresponding NTLMv2 hash for the previously created domain user.
+The primary objective of this project—demonstrating the feasibility of LLMNR/NBT-NS poisoning and successfully capturing an NTLMv2 hash in a controlled Active Directory environment—was achieved. This exercise highlights the risks associated with legacy name resolution protocols in Windows networks and underscores the importance of disabling LLMNR and NBT-NS where possible.
 
 # Prerequisites + Tools Used
 - VMware(Virtualization Software)
