@@ -198,66 +198,8 @@ All of these services are started but stops once the machine is cut off and need
     
     ![image.png](image%2016.png)
     
-- It didnt work, so we found another alternative
-
-![image.png](image%2017.png)
-
-- Head back to the Users profile on Windows 11 and open the command prompt and Run as Administrator
-- For the Username I used Administrator and password is the password you set for your account when setting up Windows 11
-
-![image.png](image%2018.png)
-
-- Head to hashcat’s official website and download the binaires which will include a .7z file
-
-![image.png](image%2019.png)
-
-- Extract the file, my have to use 7zip
-
-![image.png](image%2020.png)
-
-- Go back to Kali and get the hash from the responder logs to copy it in the notepad on Windows
-
-![image.png](image%2021.png)
-
-- type notepad in the Commad Prompt to open the Notepad app. Paste the hash in there and save the file as Hashes.txt
-
-![image.png](image%2022.png)
-
-- Using notepad wouldn’t so I started a Python HTTP server and used wget on the Windows Machine to retrieve the hashes.txt file with Powershell running as Administrator
-
-![image.png](image%2023.png)
-
-![image.png](image%2024.png)
-
-- View the file using the type command in Windows
-
-![image.png](image%2025.png)
-
-- I have multiple hashes of the same profile saved into this file from accessing the file and requesting Kali machine multiple times. So I chose to edit the file with notepad. I used Resolve-Path -path “hashes.txt” to reveal the location of hashes.txt. Then Used notepad.exe and the file path to edit the hashes.txt file
-
-![image.png](image%2026.png)
-
-- After deleting the extra hashes, I click save to save the the file under the same name and in the dame location
-
-![image.png](image%2027.png)
-
-- Hashes.txt has been edited now. There is only one username, domain name, and hash for that user
-- Below I use Reslove-Path -path “hashes.txt” to find the path of hashes.txt in Powershell running as Administrator
-
-![image.png](image%2028.png)
-
-- Now go back to the commnd prompt and run as administrator
-
-![image.png](image%2029.png)
-
-- Navigate back to the created user
-
-![image.png](image%2030.png)
-
-- Now with the command prompt running as Administrator run hashcat.exe
-
 # Results
-It turns out that I was not able to crack the hash using rockyou.txt or milw0rm-dictionary.txt wordlists. I also used both JohnTheRipper and Hashcat on the Windows 11 VM and on my personal Windows 11 system and still could not crack the NTLMv2 hash. Maybe I could crack it with a bigger or more robust wordlist? The password I set for that user also was 14 characters long so maybe that had something to do with it?
+It turns out that I was not able to crack the hash using rockyou.txt or milw0rm-dictionary.txt wordlists. I also used both JohnTheRipper and Hashcat on the Windows 11 VM and on my personal Windows 11 system and still could not crack the NTLMv2 hash. Maybe I could crack it with a bigger or more robust wordlist?
 
 # Mitigation
 - Disable LLMNR, select "TURN OFF MULTICAST NAME RESOLUTION" under Local Computer Policy > Computer Configuration >Administrative Templates > Network > DNS Client in the Group Policy Editor
