@@ -17,7 +17,7 @@ The primary objective of this project—demonstrating the feasibility of LLMNR/N
 - Create a share on the Windows 2022 Server and access the share using a created user for the Windows 11 Virtual Machine
 - Use Responder to recieve the hash from 2022 Windows Server that includes user's Username, Domain Name, and the users password encrypted with NTLMv2 hashes
   
-# Responder.py(Upadted Impacket)
+# Responder.py(Updated Impacket)
 1. Although Kali Linux already comes with impacket we install a new version of impacket for kali
     - get rid of all impacket associated files
     - apt purge **impacket**
